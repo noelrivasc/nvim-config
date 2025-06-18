@@ -1,0 +1,8 @@
+-- Sort-of copied from https://roobert.github.io/2022/12/03/Extending-Neovim
+-- Still figuring things out.
+require("mason-null-ls").setup({
+  automatic_installation = false,
+  automatic_setup = true,
+  ensure_installed = nil,
+})
+-- require("mason-null-ls").setup_handlers()
