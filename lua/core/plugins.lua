@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'qpkorr/vim-bufkill'
-  use 'rstacruz/vim-closer'
+  -- use 'rstacruz/vim-closer' -- closing too eagerly!
   use 'easymotion/vim-easymotion'
   use 'vim-vdebug/vdebug'
   use 'tpope/vim-surround'
