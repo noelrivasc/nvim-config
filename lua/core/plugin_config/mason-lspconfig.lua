@@ -11,6 +11,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "marksman",
     "sqlls",
-    "yamlls"
+    "yamlls",
+    "phpactor"
   }
 })
