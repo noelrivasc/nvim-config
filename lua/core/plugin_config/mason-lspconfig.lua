@@ -10,8 +10,9 @@ require("mason-lspconfig").setup({
     "ts_ls",
     "lua_ls",
     "marksman",
+    "phpactor",
     "sqlls",
-    "yamlls",
-    "phpactor"
+    "twiggy_language_server",
+    "yamlls"
   }
 })

@@ -5,12 +5,6 @@ vim.opt.softtabstop = 2
 vim.opt.wrap = true
 vim.opt.autoread = true
 
--- I'm not sure that the following
--- are working as expected ¬¬
-vim.o.autoindent = true
-vim.o.smartindent = true
-vim.o.cindent = true
-
 -- Line numbers
 vim.opt.ruler = true
 vim.opt.rnu = true

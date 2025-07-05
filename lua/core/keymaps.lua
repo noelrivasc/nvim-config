@@ -1,4 +1,5 @@
 vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 -- Fast save and quit
 vim.keymap.set('n', '<leader>q', ':q<cr>')
@@ -56,6 +57,10 @@ vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist)
+
+-- Move using leap
+vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
+vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

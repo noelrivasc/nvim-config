@@ -21,15 +21,16 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'qpkorr/vim-bufkill'
   -- use 'rstacruz/vim-closer' -- closing too eagerly!
-  use 'easymotion/vim-easymotion'
+  use 'ggandor/leap.nvim'
+
   use 'vim-vdebug/vdebug'
   use 'tpope/vim-surround'
   use 'norcalli/nvim-colorizer.lua'
   use 'mattn/emmet-vim'
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use 'lumiliet/vim-twig'
-  use 'Glench/Vim-Jinja2-Syntax'
   use 'ctrlpvim/ctrlp.vim'
+  use 'Olical/conjure'
+  use 'gpanders/nvim-parinfer'
 
   use {
     'neovim/nvim-lspconfig',
