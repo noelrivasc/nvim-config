@@ -40,8 +40,8 @@ vim.keymap.set('n', '<leader>f', ':NvimTreeFindFile<cr>') -- Opens NT and locate
 -- Search
 vim.keymap.set('n', '<leader>s', '/');
 -- Enable (sh) or disable (sn) search highlighting
-vim.keymap.set('n', '<leader>sh', ':set hlsearch<cr>');
-vim.keymap.set('n', '<leader>sn', ':set nohlsearch<cr>');
+vim.keymap.set('n', '<leader>mm', ':set hlsearch<cr>');
+vim.keymap.set('n', '<leader>mn', ':set nohlsearch<cr>');
 
 -- Helpful keystrokes
 -- CTRL + U To delete the comment leader after hitting enter
@@ -59,8 +59,8 @@ vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist)
 
 -- Move using leap
-vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
-vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
+vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
+vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -93,7 +93,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     -- end, opts)
     -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-    -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
     -- vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     -- vim.keymap.set('n', '<space>f', function()

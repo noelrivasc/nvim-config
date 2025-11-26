@@ -4,6 +4,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "bashls",
     "cssls",
+    "clojure_lsp",
     "dockerls",
     "html",
     "jsonls",

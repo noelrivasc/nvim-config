@@ -1,8 +1,8 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  
+
   -- My plugins here
   use 'ellisonleao/gruvbox.nvim'
   use 'nvim-tree/nvim-tree.lua'
@@ -27,10 +27,11 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
   use 'norcalli/nvim-colorizer.lua'
   use 'mattn/emmet-vim'
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'ctrlpvim/ctrlp.vim'
-  use 'Olical/conjure'
+  -- use 'Olical/conjure'
   use 'gpanders/nvim-parinfer'
+  use 'stevearc/conform.nvim'
 
   use {
     'neovim/nvim-lspconfig',
@@ -39,20 +40,20 @@ return require('packer').startup(function(use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
   }
-  
+
   -- I don't quite understand how ALE works or
-  -- what LSP server it is listening to, but it 
+  -- what LSP server it is listening to, but it
   -- produced lots of errors. I'm trying CoC to see
   -- if I get better results ootb
   -- use 'dense-analysis/ale'
-  
+
 
   -- Clojure stuff
   -- See https://tomekw.com/nvim-for-clojure-development/
   use 'guns/vim-clojure-highlight'
   use 'guns/vim-clojure-static'
   use 'luochen1990/rainbow'
-  
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
