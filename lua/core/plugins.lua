@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
   use 'guns/vim-clojure-highlight'
   use 'guns/vim-clojure-static'
   use 'luochen1990/rainbow'
+  use 'tpope/vim-fireplace'
 
 
   -- Automatically set up your configuration after cloning packer.nvim
