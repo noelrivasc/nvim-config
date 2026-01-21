@@ -9,7 +9,6 @@ require("mason-lspconfig").setup({
     "html",
     "jsonls",
     "ts_ls",
-    "lua_ls",
     "marksman",
     "phpactor",
     "sqlls",

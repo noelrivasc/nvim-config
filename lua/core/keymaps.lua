@@ -62,6 +62,11 @@ vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist)
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
 vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
 
+-- Code Snippet Expansion (LuaSnip)
+vim.keymap.set({ "i", "s" }, "<C-k>", function() ls.expand_or_jump() end)
+vim.keymap.set({ "i", "s" }, "<C-j>", function() ls.jump(-1) end)
+
+
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {

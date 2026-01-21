@@ -32,6 +32,8 @@ return require('packer').startup(function(use)
   -- use 'Olical/conjure'
   use 'gpanders/nvim-parinfer'
   use 'stevearc/conform.nvim'
+  use 'L3MON4D3/LuaSnip'
+  use { 'iamcco/markdown-preview.nvim', run = function() vim.fn['mkdp#util#install']() end }
 
   use {
     'neovim/nvim-lspconfig',

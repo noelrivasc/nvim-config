@@ -5,6 +5,13 @@ vim.opt.softtabstop = 2
 vim.opt.wrap = true
 vim.opt.autoread = true
 
+-- Enable smart indentation
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+
+-- Enable filetype-based indentation
+vim.cmd('filetype plugin indent on')
+
 -- Line numbers
 vim.opt.ruler = true
 vim.opt.rnu = true
@@ -16,6 +23,11 @@ vim.opt.smartcase = true
 -- Python provider integration
 -- (needed by vdebug)
 vim.g.python3_host_prog = vim.fn.stdpath('config') .. '/nvim-venv/bin/python3'
+
+-- CtrlP ignore directories
+vim.g.ctrlp_custom_ignore = {
+  dir = '\\v[\\/](node_modules|vendor|\\.git|dist)$',
+}
 
 -- ****************************************************
 -- LOCAL NVIM CONFIGURATION ***************************
@@ -31,17 +43,17 @@ vim.g.python3_host_prog = vim.fn.stdpath('config') .. '/nvim-venv/bin/python3'
 -- local function find_project_root()
 --   local current_dir = vim.fn.getcwd()
 --   local dir = current_dir
--- 
+--
 --   while dir ~= "/" do
 --     if vim.fn.isdirectory(dir .. "/.git") == 1 then
 --       return dir
 --     end
 --     dir = vim.fn.fnamemodify(dir, ":h")
 --   end
--- 
+--
 --   return current_dir
 -- end
--- 
+--
 -- -- Source local project configuration
 -- -- Example use:
 -- -- In .nvim/init.lua (at project root)
@@ -57,7 +69,7 @@ vim.g.python3_host_prog = vim.fn.stdpath('config') .. '/nvim-venv/bin/python3'
 --     project_root .. "/.nvimrc.lua",
 --     project_root .. "/.vim/init.lua"
 --   }
--- 
+--
 --   for _, config_path in ipairs(local_configs) do
 --     if vim.fn.filereadable(config_path) == 1 then
 --       dofile(config_path)
@@ -65,5 +77,5 @@ vim.g.python3_host_prog = vim.fn.stdpath('config') .. '/nvim-venv/bin/python3'
 --     end
 --   end
 -- end
--- 
+--
 -- source_local_config()
