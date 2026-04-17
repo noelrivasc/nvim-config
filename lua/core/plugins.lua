@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'qpkorr/vim-bufkill'
   -- use 'rstacruz/vim-closer' -- closing too eagerly!
-  use 'ggandor/leap.nvim'
+  use 'https://codeberg.org/andyg/leap.nvim'
 
   use 'vim-vdebug/vdebug'
   use 'tpope/vim-surround'
@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   use 'stevearc/conform.nvim'
   use 'L3MON4D3/LuaSnip'
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn['mkdp#util#install']() end }
+  use 'juxt/nvim-allium'
 
   use {
     'neovim/nvim-lspconfig',

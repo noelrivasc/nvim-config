@@ -8,6 +8,7 @@ require("mason-lspconfig").setup({
     "dockerls",
     "html",
     "jsonls",
+    "eslint",
     "ts_ls",
     "marksman",
     "phpactor",

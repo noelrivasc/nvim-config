@@ -1,0 +1,30 @@
+# Local Mason registry entry for allium-lsp (not yet in upstream mason-registry).
+# Discovered via the `file:` registry added in lsp_config.lua. Installs the LSP
+# binary from juxt/allium-tools releases into mason's bin dir, which is on $PATH.
+---
+name: allium-lsp
+description: Language server for Allium, a specification language for behavioural system design.
+homepage: https://github.com/juxt/allium-tools
+licenses:
+  - MIT
+languages:
+  - Allium
+categories:
+  - LSP
+
+source:
+  id: pkg:github/juxt/allium-tools@v3.0.4
+  asset:
+    - target:
+        - darwin_arm64
+        - darwin_x64
+        - linux_x64_gnu
+        - linux_arm64_gnu
+        - linux_x64_musl
+        - linux_arm64_musl
+        - win_x64
+        - win_arm64
+      file: 'allium-lsp-{{ version | strip_prefix "v" }}.tar.gz'
+
+bin:
+  allium-lsp: allium-lsp/allium-lsp

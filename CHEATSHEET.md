@@ -16,6 +16,10 @@ Leader key: `,` (comma)
 - `,gh` - Show hover documentation
 - `,gi` - Go to implementation
 - `,gs` - Show signature help
+- `,gr` - List references
+
+### Code Actions
+- `<space>ca` - Open code actions menu (auto-import missing symbols, quick fixes, refactors)
 
 ### Refactoring
 - `<space>rn` - Rename symbol (renames across all files in project)
